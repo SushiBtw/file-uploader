@@ -23,7 +23,7 @@ app.post('/upload', function(req, res) {
   let uploadPath;
 
   if (req.body.pass != "sushi1") {
-    res.status(401);
+    res.send(401);
     return;
   }
   
@@ -41,7 +41,7 @@ app.post('/upload', function(req, res) {
   let extension = sampleFile.name.substring(sampleFile.name.lastIndexOf('.') + 1);
   
   if(extension == "png" || extension == "jpg" || extension == "jpeg" || extension == "gif")
-  {} else return res.status(401);
+  {} else return res.status(401).send('Invalid type.');
 
   uploadPath = __dirname + '/uploads/' + fileName + "." + extension;
 
@@ -52,6 +52,10 @@ app.post('/upload', function(req, res) {
 
     res.redirect(`/u/${fileName}.${extension}`);
   });
+});
+
+app.get('*', function(req, res) {
+  res.send(404);
 });
 
 app.listen(PORT, function() {
