@@ -14,6 +14,10 @@ app.get('/ping', function(req, res) {
   res.send('pong');
 });
 
+app.get('/', function(req, res) {
+  res.status(401);
+});
+
 app.post('/upload', function(req, res) {
   let sampleFile;
   let uploadPath;
