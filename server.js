@@ -18,6 +18,12 @@ app.post('/upload', function(req, res) {
   let sampleFile;
   let uploadPath;
 
+  if (req.body.pass != "sushi1") {
+    res.status(401);
+    return;
+  }
+
+
   if (!req.files || Object.keys(req.files).length === 0) {
     res.status(400).send('No files were uploaded.');
     return;
