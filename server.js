@@ -22,7 +22,7 @@ app.post('/upload', function(req, res) {
   let sampleFile;
   let uploadPath;
 
-  if (req.body.pass != "sushi1") {
+  if (req.body.pass != "sushibtw0") {
     res.send(401);
     return;
   }
