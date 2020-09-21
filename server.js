@@ -22,7 +22,7 @@ app.post('/upload', function(req, res) {
     res.status(401);
     return;
   }
-
+  
 
   if (!req.files || Object.keys(req.files).length === 0) {
     res.status(400).send('No files were uploaded.');
@@ -35,6 +35,9 @@ app.post('/upload', function(req, res) {
   
   let fileName = uniqid.time();
   let extension = sampleFile.name.substring(sampleFile.name.lastIndexOf('.') + 1);
+  
+  if(extension == "png" || extension == "jpg" || extension == "jpeg" || extension == "gif")
+  {} else return res.status(401);
 
   uploadPath = __dirname + '/uploads/' + fileName + "." + extension;
 
