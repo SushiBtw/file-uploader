@@ -15,7 +15,7 @@ app.get('/ping', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-  res.status(401);
+  res.send(401);
 });
 
 app.post('/upload', function(req, res) {
