@@ -26,7 +26,11 @@ app.post('/upload', function (req, res) {
     let fileName;
     let extension;
 
-    //userBase.filter(user => user.username == user);
+    let u = userBase.filter(user => user.username == user);
+    if(!u)
+        return res.status(400).send('Invalid user.');
+    if(u[0].password !== password)
+        return res.status(400).send('Invalid credentials.');
 
 
     if (!files || Object.keys(files).length === 0)
