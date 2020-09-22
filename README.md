@@ -13,8 +13,8 @@ cd file-uploader
 
 Basic installation, you can modify the `config.js` file.
 Default details:
-- user: ...
-- password: ...
+- user: default
+- password: default
 ```bash
 npm i
 node .
