@@ -26,7 +26,7 @@ app.post('/upload', function (req, res) {
     let fileName;
     let extension;
 
-    let u = userBase.filter(user => user.username == user);
+    let u = userBase.filter(x => x.username == user);
     if(!u || Object.keys(u).length === 0)
         return res.status(400).send('Invalid user.');
     if(u[0].password !== password)
