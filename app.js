@@ -27,7 +27,7 @@ app.post('/upload', function (req, res) {
     let extension;
 
     let u = userBase.filter(user => user.username == user);
-    if(!u)
+    if(!u || Object.keys(u).length === 0)
         return res.status(400).send('Invalid user.');
     if(u[0].password !== password)
         return res.status(400).send('Invalid credentials.');
