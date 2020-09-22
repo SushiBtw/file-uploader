@@ -1,28 +1,24 @@
 {
-  "name": "guidebot",
-  "version": "2.0.3",
-  "description": "A boilerplate example bot with command handler and reloadable commands. Updated and Maintained by the Idiot's Guide Community",
-  "main": "node index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "engines": {
-    "node": "8.4.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AnIdiotsGuide/guidebot.git"
-  },
-  "author": "The Idiot's Guide Community",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/AnIdiotsGuide/guidebot/issues"
-  },
-  "homepage": "https://github.com/AnIdiotsGuide/guidebot#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-fileupload": "^1.2.0",
-    "uniqid": "^5.2.0"
-  }
+    "name": "file-uploader",
+    "version": "1.0.0",
+    "description": "Simple node.js application to create a own File Storage.",
+    "main": "app.js",
+    "engines": {
+        "node": "8.4.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SushiBtw/file-uploader"
+    },
+    "author": "The Idiot's Guide Community",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/SushiBtw/file-uploader/issues"
+    },
+    "homepage": "https://github.com/SushiBtw/file-uploader#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-fileupload": "^1.2.0",
+        "uniqid": "^5.2.0"
+    }
 }

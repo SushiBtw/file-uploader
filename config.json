@@ -1,0 +1,21 @@
+{
+    "port": 8080,
+    "uploadsPath": "u",
+    "localPath": "uploads",
+    "userBase": [
+        {
+            "username": "default",
+            "password": "default"
+        },
+        {
+            "username": "root",
+            "password": "password123"
+        }
+    ],
+    "allowedExtensions": [
+        "png",
+        "jpg",
+        "jpeg",
+        "gif"
+    ]
+}
